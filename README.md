@@ -52,5 +52,5 @@ The jupyter notebook `plot_paper_figs.ipynb` contains code for plotting the fina
 ## Pre-trained Models and Data
 
 The pre-trained CasanovoTL model checkpoint, along with the  checkpoint after finetuning, are available here: 
-https://drive.google.com/drive/folders/11-PmLuuIOaiUPrU9lhfkI1Mag1sdfeaq?usp=sharing
+[https://drive.google.com/drive/folders/11-PmLuuIOaiUPrU9lhfkI1Mag1sdfeaq?usp=sharing](https://drive.google.com/drive/folders/1eujmMTAhVJP4XaXUC0UlVXwUI2n7Tz4a?usp=sharing)
 Additionally, this folder contains MGF files for the chimericity experiment, and the database search + GlyCounter results for the glyco data, as these are not already publicly available. The remaining datasets are already published on public repositories, as described in our manuscript. 
