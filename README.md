@@ -1,11 +1,11 @@
 
   
 
-# Foundation Model for Mass Spectrometry Proteomics
+# A transfer learning approach for Mass Spectrometry Proteomics
 
   
 
-This folder contains all of the code required to use Casanovo Foundation and reproduce the experimental results in our paper. The main model implementation is contained in the subdirectory Casanovo, which is forked from the publicly available [git repo](https://github.com/Noble-Lab/casanovo).
+This folder contains all of the code required to use CasanovoTL and reproduce the experimental results in our paper. The main model implementation is contained in the subdirectory Casanovo, which is forked from the publicly available [git repo](https://github.com/Noble-Lab/casanovo).
 
 To avoid excessively long runtimes, we recommend running training and inference on a GPU if possible. 
 
@@ -16,7 +16,7 @@ Required packages are listed in the file requirements.txt.
 We recommend using conda to manage dependencies. A new environment can be created with:
 
 ```
-conda create --name casanovo_foundation --file references.txt
+conda create --name casanovo_tl --file references.txt
 ```
 
 Finally, you will need to navigate to the Casanovo directory, and install it with:
@@ -27,7 +27,7 @@ pip install .
 
 ## Evaluation
 
-To run Casanovo foundation to obtain spectrum representations for data in a given MGF file, run:
+To run CasanovoTL to obtain spectrum representations for data in a given MGF file, run:
 
 ```
 casanovo sequence <mgf_file> --model <pretrained_checkpoint> --config embed.yaml --output <output_file>
@@ -43,7 +43,7 @@ The subdirectory `multi_task` then contains the scripts necessary for running th
 
 ## Downstream tasks
   
-There is one subdirectory for each downstream task, containing the relevent code to embed spectra using Casanovo foundation, train a task specific prediction head, and train the baseline models. The directory for the phospho task also contains the code for running the learning curve experiment.  
+There is one subdirectory for each downstream task, containing the relevent code to embed spectra using CasanovoTL, train a task specific prediction head, and train the baseline models. The directory for the phospho task also contains the code for running the learning curve experiment.  
 
 ## Final Results
 
@@ -51,6 +51,6 @@ The jupyter notebook `plot_paper_figs.ipynb` contains code for plotting the fina
 
 ## Pre-trained Models and Data
 
-The pre-trained Casanovo Foundation model checkpoint, along with the  checkpoint after finetuning, are available here: 
+The pre-trained CasanovoTL model checkpoint, along with the  checkpoint after finetuning, are available here: 
 https://drive.google.com/drive/folders/11-PmLuuIOaiUPrU9lhfkI1Mag1sdfeaq?usp=sharing
 Additionally, this folder contains MGF files for the chimericity experiment, and the database search + GlyCounter results for the glyco data, as these are not already publicly available. The remaining datasets are already published on public repositories, as described in our manuscript. 
